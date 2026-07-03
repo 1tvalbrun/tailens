@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import { GeistMono } from "geist/font/mono";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ConvexClientProvider } from "./providers";
-import "./globals.css";
+import "@/styles/globals.css";
 
 const generalSans = localFont({
   src: "./fonts/GeneralSans-Variable.woff2",
@@ -20,7 +20,10 @@ const switzer = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "tailens",
+  title: {
+    default: "tailens",
+    template: "%s — tailens",
+  },
   description: "See how your real background covers any target.",
 };
 
