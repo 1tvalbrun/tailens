@@ -41,9 +41,7 @@ export default function RootLayout({
         <ClerkProvider
           appearance={{
             variables: {
-              // Clerk derives its shade/hover palette from a concrete color, so
-              // this mirrors --color-brand (Pine) rather than referencing the token.
-              colorPrimary: "#17513B",
+              colorPrimary: "var(--color-brand)",
               fontFamily: "var(--font-switzer)",
             },
           }}
