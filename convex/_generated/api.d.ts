@@ -8,7 +8,10 @@
  * @module
  */
 
+import type * as achievements from "../achievements.js";
 import type * as auth from "../auth.js";
+import type * as profiles from "../profiles.js";
+import type * as roles from "../roles.js";
 
 import type {
   ApiFromModules,
@@ -17,7 +20,10 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  achievements: typeof achievements;
   auth: typeof auth;
+  profiles: typeof profiles;
+  roles: typeof roles;
 }>;
 
 /**
