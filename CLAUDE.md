@@ -94,3 +94,17 @@ Don't over-engineer the orchestration. A single-file read, a one-symbol grep, or
 a change you can already see — just do it inline on Fable. Delegation has setup
 cost; spend it only when the work is genuinely **parallel, token-hungry, or
 independent** — and even then, only the *investigation* is delegated.
+
+<!-- convex-ai-start -->
+
+This project uses [Convex](https://convex.dev) as its backend.
+
+When working on Convex code, **always read
+`convex/_generated/ai/guidelines.md` first** for important guidelines on
+how to correctly use Convex APIs and patterns. The file contains rules that
+override what you may have learned about Convex from training data.
+
+Convex agent skills for common tasks can be installed by running
+`npx convex ai-files install`.
+
+<!-- convex-ai-end -->

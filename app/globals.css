@@ -1,26 +1,50 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Base / neutrals */
+  --color-paper:      #F5F6F4; /* app background */
+  --color-surface:    #FFFFFF; /* cards */
+  --color-surface-2:  #FBFBFA; /* raised */
+  --color-ink:        #171A1C; /* primary text */
+  --color-ink-2:      #5B625F; /* secondary text */
+  --color-ink-3:      #8A918D; /* muted / labels */
+  --color-line:       #E5E7E3; /* borders */
+  --color-line-2:     #EEF0EC; /* dividers */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Coverage semantics — RESERVED for covered / transferable / gap ONLY */
+  --color-covered:        #17513B; /* Pine */
+  --color-covered-tint:   #E7F0EA;
+  --color-covered-border: #CBE0D2;
+  --color-transferable:        #87591A; /* Amber */
+  --color-transferable-tint:   #F6ECD7;
+  --color-transferable-border: #E7D4AD;
+  --color-gap:        #A23B37; /* Clay */
+  --color-gap-tint:   #F4E7E5;
+  --color-gap-border: #E7C9C5;
+  --color-meter-pine:  #17513B;
+  --color-meter-amber: #C79A4A;
+  --color-meter-clay:  #A23B37;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Sidebar / dark chrome */
+  --color-sidebar:         #14181A;
+  --color-sidebar-raised:  #1B2124;
+  --color-sidebar-text:    #A7AFAB;
+  --color-sidebar-active:  #EAF2EC;
+  --color-accent:          #6FBF95; /* Mint — logo / active in dark chrome */
+
+  /* Primary action / brand */
+  --color-brand:        #17513B; /* Pine */
+  --color-brand-hover:  #1C6349;
+
+  /* Type — General Sans (display) / Switzer (UI/body) / Geist Mono (data).
+     Font files are wired via next/font in app/layout.tsx and exposed as these vars. */
+  --font-display: var(--font-general-sans);
+  --font-sans:    var(--font-switzer);
+  --font-mono:    var(--font-geist-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
 }
